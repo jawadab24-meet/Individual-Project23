@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <link rel="stylesheet" href="static/css/style.css">
+        <style>
+        body {
+            background-image: url("https://img.uefa.com/imgml/uefacom/elements/fallbacks/fallback.jpg");
+            height: 10%;
+            
+            background-repeat: no-repeat;
+/*            background-position: center;*/
+            background-size: cover;
+            }
+    </style>
+    <style >        
+     .button1 {background-color: #74FF33;}
+     .button {background-color: #FF3333;}
+    </style>
+</head>
+<body>
+
+   <button class="button" id="kk" ><a href="/" style ="text-decoration: none"><FONT COLOR= black>to singout</a></button>
+    <br>
+    <a href="/fcb"><img src="https://logos-world.net/wp-content/uploads/2020/04/Barcelona-Logo.png" height="320px" width="550px"></a>
+    <a href="/rm"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" height="400px" width="300px"></a>
+    <a href="/ars"><img src="https://logos-world.net/wp-content/uploads/2020/05/Arsenal-Logo.png" height="350px" width="600px"></a>
+    <a href="/city"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png" height="350px" width="350px" ></a>
+    <center>
+    <form method="post" action="/home">
+     <input id = "kk" type="text" name="comment" placeholder="your fav team">
+    <div>
+        <input id = "kk" class="button1" type="submit"/>
+    </div>
+    </form>
+    </center>
+    {% for x in comments %}
+       {{comments[x]}}
+        <br>
+    {%endfor%}
+
+</body>
+</html>
